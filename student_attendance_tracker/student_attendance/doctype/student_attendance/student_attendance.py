@@ -8,7 +8,7 @@ class StudentAttendance(Document):
             "date": self.date,
             "name": ["!=", self.name]
         }):
-            frappe.throw(f"Attendance already marked for {self.student_name} on {self.date}")
+            frappe.throw(f"Attendance already marked for {self.student_name} on {self.date}"
 
         # Auto calculate monthly attendance % (simple logic placeholder)
         self.calculate_attendance_percentage()
